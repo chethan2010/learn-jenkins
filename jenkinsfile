@@ -1,0 +1,22 @@
+pipline{
+    agent any
+        stages{
+            stage('build'){
+              steps{  
+                sh 'echo this is Build'
+              }
+           
+            }
+            stage('Test'){
+                steps{
+                  sh 'echo this is teast'  
+                }
+            }
+            stage('Deploy'){
+                steps{
+                  sh 'echo this is Deploy'  
+                }
+            }        
+        }
+            
+}

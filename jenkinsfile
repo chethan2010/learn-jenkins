@@ -60,6 +60,8 @@ pipeline{
 
             }
 
+    }
+    
      post{
           always{
             echo 'Hello says always again'
@@ -71,7 +73,6 @@ pipeline{
             echo 'i will run when pipline is failure'
           }
 
-    }
        
              
     }

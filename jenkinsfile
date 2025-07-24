@@ -68,10 +68,10 @@ pipeline{
         echo 'Hello says always again'
       }
       success{
-        echo 'Hello says if build is success only'
+        echo 'i will run when pipline is success'
       }
       failure{
-        echo 'Hello says if build is fail only'
+        echo 'i will run when pipline is failure'
       }
 
     }

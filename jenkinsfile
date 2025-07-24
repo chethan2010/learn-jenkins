@@ -58,9 +58,9 @@ pipeline{
                 error 'some failure'
             }
 
+            }
 
-        }
-        post{
+     post{
           always{
             echo 'Hello says always again'
           }
@@ -72,8 +72,10 @@ pipeline{
           }
 
     }
-
-        }
-            
+       
+             
     }
+    
+     
 
+}

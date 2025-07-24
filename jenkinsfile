@@ -55,7 +55,7 @@ pipeline{
 
                 echo 'trigger test'
 
-                error 'some failure'
+                // error 'some failure'
             }
 
             }

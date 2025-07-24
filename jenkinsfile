@@ -19,7 +19,7 @@ pipeline{
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-      environment{
+      environment {
         Deploy_To  = 'Production'
         Greetings  = 'Good Morning'
     }
@@ -54,9 +54,24 @@ pipeline{
                 echo "Password: ${params.PASSWORD}"
 
                 echo 'trigger test'
+
+                error 'some failure'
             }
         }
 
         }
             
+    }
+
+    post{
+      always{
+        echo 'Hello says always again'
+      }
+      success{
+        echo 'Hello says if build is success only'
+      }
+      failure{
+        echo 'Hello says if build is fail only'
+      }
+
     }

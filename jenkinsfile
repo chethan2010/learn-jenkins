@@ -57,21 +57,23 @@ pipeline{
 
                 error 'some failure'
             }
+
+
         }
+        post{
+          always{
+            echo 'Hello says always again'
+          }
+          success{
+            echo 'i will run when pipline is success'
+          }
+          failure{
+            echo 'i will run when pipline is failure'
+          }
+
+    }
 
         }
             
     }
 
-    post{
-      always{
-        echo 'Hello says always again'
-      }
-      success{
-        echo 'i will run when pipline is success'
-      }
-      failure{
-        echo 'i will run when pipline is failure'
-      }
-
-    }

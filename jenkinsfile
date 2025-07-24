@@ -19,9 +19,9 @@ pipeline{
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-    environement{
-      Deploy_To = 'Production'
-      Greeting_To = 'Good Morning'
+      environment{
+        Deploy_To  = 'Production'
+        Greetings  = 'Good Morning'
     }
         stages{
             stage('build'){

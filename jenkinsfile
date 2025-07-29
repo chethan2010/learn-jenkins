@@ -1,12 +1,12 @@
 pipeline{
-    agent{
-      label 'AGENT-1'
-    }
-    options{
+    // agent{
+    //   label 'AGENT-1'
+    // }
+    // options{
 
-        timeout(time:2, unit: 'MINUTES')
-        disableConcurrentBuilds()
-    }
+    //     timeout(time:2, unit: 'MINUTES')
+    //     disableConcurrentBuilds()
+    // }
     //   parameters {
     //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -19,10 +19,10 @@ pipeline{
     //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     // }
 
-      environment {
-        Deploy_To  = 'Production'
-        Greetings  = 'Good Morning'
-    }
+    //   environment {
+    //     Deploy_To  = 'Production'
+    //     Greetings  = 'Good Morning'
+    // }
         stages{
             stage('build'){
               steps{  

@@ -2,7 +2,21 @@ pipeline {
     agent {
        label 'Agent-1'
     }
+    options{
+        timeout(time: 30, unit: 'MINUTES')
+        disableConcurrentBuilds()
+    }
+    parameters {
+        string(name: 'PERSON', defaultValue: 'John Doe', description: 'Hemanth')
 
+        text(name: 'BIOGRAPHY', defaultValue: 'Write a short biography', description: 'Enter your biography')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this option')
+
+        choice(name: 'CHOICE', choices: ['Option 1', 'Option 2', 'Option 3'], description: 'Choose an option')
+        
+        password(name: 'PASSWORD', defaultValue: '', description: 'Enter a password')
+    }
     stages {
 
         stage('build') {

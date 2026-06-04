@@ -24,19 +24,19 @@ pipeline {
             }
         }
 
-        stage('pars') {
-            steps {
-                echo "Hello ${params.PERSON}"
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"
+        // stage('pars') {
+        //     steps {
+        //         echo "Hello ${params.PERSON}"
+        //         echo "Biography: ${params.BIOGRAPHY}"
+        //         echo "Toggle: ${params.TOGGLE}"
+        //         echo "Choice: ${params.CHOICE}"
+        //         echo "Password: ${params.PASSWORD}"
 
-                echo 'trigger test'
+        //         echo 'trigger test'
 
-                error 'some failure'
-            }
-        }
+        //         error 'some failure'
+        //     }
+        // }
     }
 
     post {

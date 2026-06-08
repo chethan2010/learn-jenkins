@@ -14,8 +14,12 @@ pipeline {
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this option')
 
         choice(name: 'CHOICE', choices: ['Option 1', 'Option 2', 'Option 3'], description: 'Choose an option')
-        
+
         password(name: 'PASSWORD', defaultValue: '', description: 'Enter a password')
+    }
+    environment {
+        DEPLOY_ENV = 'production'
+        
     }
     stages {
 
